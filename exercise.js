@@ -1,11 +1,16 @@
-function sumUntil(maxValue) {
-  let sum = 0;
+const person1 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 25,
+};
 
-  for (let i = 1; i <= maxValue; i++) {
-    sum += i;
-  }
+const person2 = person1;
 
-  return sum;
-}
+person2.firstName = "Simon";
 
-console.log(sumUntil(7));
+// Modify the property `firstName` of the `person2` in "Simon".
+
+console.log(person1);
+console.log(person2);
+
+// quando dico che person2=person1 vuol dire che entrambi hanno lo stesso valore, ovviamente se cambio uno, l'altro verrà anche cambiato.
