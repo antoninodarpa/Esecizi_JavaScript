@@ -1,31 +1,11 @@
-// const sum = function (a, b) {
-//   return a + b;
-// }
+function sumUntil(maxValue) {
+  let sum = 0;
 
-// const subtract = function (a, b) {
-//   return a - b;
-// }
+  for (let i = 1; i <= maxValue; i++) {
+    sum += i;
+  }
 
-// const multiply = function (a, b) {
-//   return a * b;
-// }
+  return sum;
+}
 
-// const divide = function (a, b) {
-//   return a / b;
-// }
-
-// const log = function (value) {
-//   console.log(value);
-// }
-
-const sum = (a, b) => a + b;
-
-const subtract = (a, b) => a - b;
-
-const multiply = (a, b) => a * b;
-
-const divide = (a, b) => a / b;
-
-// const log = (value) => console.log(value); (non capisco a cosa serve)
-
-console.log(divide(subtract(multiply(sum(2, 4), sum(5, 2)), 2), 5));
+console.log(sumUntil(7));
