@@ -1,28 +1,31 @@
-function nicknameMap(persons) {
-  const nicknames = [];
+// const sum = function (a, b) {
+//   return a + b;
+// }
 
-  for (let i = 0; i < persons.length; i++) {
-    const person = persons[i];
-    const nickname = person.name + "-" + person.age;
-    nicknames.push(nickname);
-  }
+// const subtract = function (a, b) {
+//   return a - b;
+// }
 
-  return nicknames;
-}
+// const multiply = function (a, b) {
+//   return a * b;
+// }
 
-const persons = [
-  { name: "Paul", age: 16 },
-  { name: "George", age: 17 },
-  { name: "Lucas", age: 21 },
-  { name: "Marco", age: 32 },
-  { name: "Peter", age: 18 },
-  { name: "Carl", age: 13 },
-  { name: "Simon", age: 24 },
-  { name: "Mark", age: 15 },
-  { name: "Sandra", age: 34 },
-  { name: "Alice", age: 28 },
-];
+// const divide = function (a, b) {
+//   return a / b;
+// }
 
-const nicknames = nicknameMap(persons);
-// console.log(persons);
-console.log(nicknames);
+// const log = function (value) {
+//   console.log(value);
+// }
+
+const sum = (a, b) => a + b;
+
+const subtract = (a, b) => a - b;
+
+const multiply = (a, b) => a * b;
+
+const divide = (a, b) => a / b;
+
+// const log = (value) => console.log(value); (non capisco a cosa serve)
+
+console.log(divide(subtract(multiply(sum(2, 4), sum(5, 2)), 2), 5));
