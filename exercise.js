@@ -1,16 +1,11 @@
-const person1 = {
-  firstName: "John",
-  lastName: "Doe",
-  age: 25,
-};
+function printName() {
+  let helloName = "Hello John";
 
-const person2 = person1;
+  function inner() {
+    return helloName;
+  }
 
-person2.firstName = "Simon";
+  console.log(inner());
+}
 
-// Modify the property `firstName` of the `person2` in "Simon".
-
-console.log(person1);
-console.log(person2);
-
-// quando dico che person2=person1 vuol dire che entrambi hanno lo stesso valore, ovviamente se cambio uno, l'altro verrà anche cambiato.
+printName();
