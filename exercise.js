@@ -1,39 +1,28 @@
-// ceo => 2200
-// manager => 1800
-// cto => 1800
-// developer => 1500
-// default => 1000
-function calculateSalary(role) {
-  let salary;
+function nicknameMap(persons) {
+  const nicknames = [];
 
-  switch (role) {
-    case "ceo":
-      salary = 2200;
-      break;
-    case "manager":
-      salary = 1800;
-      break;
-    case "cto":
-      salary = 1800;
-      break;
-    case "developer":
-      salary = 1500;
-      break;
-    default:
-      salary = 1000;
-      break;
+  for (let i = 0; i < persons.length; i++) {
+    const person = persons[i];
+    const nickname = person.name + "-" + person.age;
+    nicknames.push(nickname);
   }
-  return salary + "$ " + role;
+
+  return nicknames;
 }
 
-const ceoSalary = calculateSalary("ceo");
-const managerSalary = calculateSalary("manager");
-const ctoSalary = calculateSalary("cto");
-const developerSalary = calculateSalary("developer");
-const otherSalary = calculateSalary("other");
+const persons = [
+  { name: "Paul", age: 16 },
+  { name: "George", age: 17 },
+  { name: "Lucas", age: 21 },
+  { name: "Marco", age: 32 },
+  { name: "Peter", age: 18 },
+  { name: "Carl", age: 13 },
+  { name: "Simon", age: 24 },
+  { name: "Mark", age: 15 },
+  { name: "Sandra", age: 34 },
+  { name: "Alice", age: 28 },
+];
 
-console.log(ceoSalary);
-console.log(managerSalary);
-console.log(ctoSalary);
-console.log(developerSalary);
-console.log(otherSalary);
+const nicknames = nicknameMap(persons);
+// console.log(persons);
+console.log(nicknames);
