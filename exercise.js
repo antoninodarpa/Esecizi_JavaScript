@@ -1,9 +1,12 @@
-function multiplyByTwo(value) {
-  let number = 2;
+const person = {
+  firstName: "Mario",
+  lastName: "Rossi",
+  age: 25,
+};
 
-  function inner() {
-    return value * number;
-  }
-  return inner;
-}
-console.log(multiplyByTwo(4)());
+// console.log(Object.keys(person));
+
+Object.keys(person).forEach((key) => {
+  console.log(`${key}: ${person[key]}`);
+});
+// Print values of person using Object.keys
