@@ -1,12 +1,11 @@
-const person = {
-  firstName: "Mario",
-  lastName: "Rossi",
-  age: 25,
-};
+// const order = {};
 
-// console.log(Object.keys(person));
+// if (order && order.customer && order.customer.address && !order.customer.address.city) {
+//   console.log('City is required');
+// }
 
-Object.keys(person).forEach((key) => {
-  console.log(`${key}: ${person[key]}`);
-});
-// Print values of person using Object.keys
+const order = {};
+
+if (!order?.customer?.address?.city) {
+  console.log("City is required");
+}
