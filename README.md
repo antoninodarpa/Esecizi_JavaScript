@@ -1,18 +1,14 @@
 # Classes
 
-Define a static method called fromObject inside the Person class which takes in an object literal as parameter and instantiate a Person object.
+Define a class called `Person` that takes in three parameters in the constructor (`firstName`, `lastName` and `age`). Create the getters and setters methods for each property and a getter method called `fullName` that returns the full name.
 
 class Person {
-constructor(firstName, lastName) {
-this.firstName = firstName;
-this.lastName = lastName;
-}
+// ...
 }
 
-const obj = {
-firstName: 'Mario',
-lastName: 'Rossi'
-};
+const person = new Person('Mario', 'Rossi', 25);
+console.log(person.fullName);
 
-const person = Person.fromObject(obj);
-console.log(person.firstName + " " + person.lastName);
+person.firstName = 'Maria';
+person.lastName = 'Verdi';
+console.log(person.fullName);
