@@ -1,41 +1,40 @@
-class Person {
-  constructor(firstName, lastName, age) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._age = age;
-  }
-  get firstName() {
-    return this._firstName;
-  }
-
-  set firstName(newFirstName) {
-    this._firstName = newFirstName;
-  }
-
-  get lastName() {
-    return this._lastName;
-  }
-
-  set lastName(newLastName) {
-    this._lastName = newLastName;
-  }
-
-  get age() {
-    return this._age;
-  }
-
-  set age(newAge) {
-    this._age = newAge;
-  }
-
-  get fullName() {
-    return this._firstName + " " + this._lastName;
+class Square {
+  constructor(side) {
+    this.side = side;
   }
 }
 
-const person = new Person("Mario", "Rossi", 25);
-console.log(person.fullName);
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+}
 
-person.firstName = "Maria";
-person.lastName = "Verdi";
-console.log(person.fullName);
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+}
+
+class AreaCalculator {
+  static calculate(shape) {
+    if (shape instanceof Square) {
+      return shape.side * shape.side;
+    } else if (shape instanceof Rectangle) {
+      return shape.width * shape.height;
+    } else if (shape instanceof Circle) {
+      return Math.PI * shape.radius * shape.radius;
+    } else {
+      throw new Error("Figura geometrica non supportata");
+    }
+  }
+}
+
+const square = new Square(4);
+const rectangle = new Rectangle(4, 2);
+const circle = new Circle(5);
+
+console.log(AreaCalculator.calculate(square));
+console.log(AreaCalculator.calculate(rectangle));
+console.log(AreaCalculator.calculate(circle));
