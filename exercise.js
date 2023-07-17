@@ -5,5 +5,21 @@ class Person {
   }
 }
 
-const developer = new Person("Mario", "Rossi");
-console.log(developer.firstName + " " + developer.lastName);
+class Developer extends Person {
+  constructor(firstName, lastName, role) {
+    super(firstName, lastName);
+    this.role = role;
+  }
+  get role() {
+    return this._role;
+  }
+
+  set role(newRole) {
+    this._role = newRole;
+  }
+}
+
+const developer = new Developer("Mario", "Rossi", "Front-end");
+console.log(
+  developer.firstName + " " + developer.lastName + " " + developer.role
+);
