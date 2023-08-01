@@ -1,9 +1,6 @@
-const person = {
-  id: 1,
-  firstName: "Mario",
-  lastName: "Rossi",
-  age: 25,
-};
+let numberStore = [0, 1, 2];
+let newNumber = 3;
 
-const { id, firstName: name, lastName: surname, age: old } = person;
-console.log(id, name, surname, old);
+numberStore = [...numberStore, newNumber];
+
+console.log(numberStore); // Output: [0, 1, 2, 3]
