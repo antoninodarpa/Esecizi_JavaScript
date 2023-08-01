@@ -1,7 +1,10 @@
-function sum(...numbers) {
-  return numbers.reduce((acc, curr) => acc + curr, 0);
-}
+const person = {
+  id: 1,
+  firstName: "Mario",
+  lastName: "Rossi",
+  age: 25,
+};
 
-console.log(sum(1, 2, 3, 4, 5));
-console.log(sum(1, 2, 3));
-console.log(sum(10, 20, 30, 40, 50));
+const { id, ...personInfo } = person;
+
+console.log(id, personInfo);
