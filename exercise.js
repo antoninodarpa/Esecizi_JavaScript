@@ -1,6 +1,15 @@
-function sum(num1, num2, num3) {
-  return num1 + num2 + num3;
+class Person {
+  constructor(id, firstName, lastName, age) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+
+  getFullName() {
+    return this.firstName + " " + this.lastName;
+  }
 }
 
-const numbers = [1, 2, 3];
-console.log(sum(...sum));
+const developer = new Person(1, "Mario", "Rossi", 25);
+const developerJSON = JSON.stringify(developer);
