@@ -1,3 +1,3 @@
 # Destructuring
 
-Do you know how to "merge" the value of the newNumber variable into numberStore without using the array method push?
+The sum function has a high numbers of parameters. How can we improve the code in order to make it accept any amount of numbers to sum as its argument?
