@@ -1,9 +1,10 @@
-let num1 = 10;
-let num2 = 20;
-console.log("Prima dello scambio: ", num1, num2); // Prima dello scambio: 10 20
+const person = {
+  id: 1,
+  firstName: "Mario",
+  lastName: "Rossi",
+  age: 25,
+};
 
-// Scambio di variabili utilizzando la destrutturazione
-[num1, num2] = [num2, num1];
+let { id, firstName, lastName, age } = person;
 
-console.log("Dopo lo scambio: ", num1, num2); // Dopo lo scambio: 20 10
-
+console.log(id, firstName, lastName, age);
