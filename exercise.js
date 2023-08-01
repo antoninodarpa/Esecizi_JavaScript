@@ -1,40 +1,9 @@
-class Square {
-  constructor(side) {
-    this.side = side;
-  }
-}
+let num1 = 10;
+let num2 = 20;
+console.log("Prima dello scambio: ", num1, num2); // Prima dello scambio: 10 20
 
-class Rectangle {
-  constructor(width, height) {
-    this.width = width;
-    this.height = height;
-  }
-}
+// Scambio di variabili utilizzando la destrutturazione
+[num1, num2] = [num2, num1];
 
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-  }
-}
+console.log("Dopo lo scambio: ", num1, num2); // Dopo lo scambio: 20 10
 
-class AreaCalculator {
-  static calculate(shape) {
-    if (shape instanceof Square) {
-      return shape.side * shape.side;
-    } else if (shape instanceof Rectangle) {
-      return shape.width * shape.height;
-    } else if (shape instanceof Circle) {
-      return Math.PI * shape.radius * shape.radius;
-    } else {
-      throw new Error("Figura geometrica non supportata");
-    }
-  }
-}
-
-const square = new Square(4);
-const rectangle = new Rectangle(4, 2);
-const circle = new Circle(5);
-
-console.log(AreaCalculator.calculate(square));
-console.log(AreaCalculator.calculate(rectangle));
-console.log(AreaCalculator.calculate(circle));
