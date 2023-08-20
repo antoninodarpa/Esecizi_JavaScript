@@ -1,31 +1,23 @@
-function printAsyncName(callback, name) {
-  setTimeout(function () {
-    try {
-      callback(null, "Hello");
-    } catch (error) {
-      console.error("Errore nel callback:", error);
-    }
-
-    setTimeout(function () {
-      try {
-        if (name) {
-          console.log(name);
-        } else {
-          throw new Error("Il nome non è definito.");
-        }
-      } catch (error) {
-        console.error("Errore nella stampa del nome:", error);
+const promise1 = (isLogged) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (isLogged) {
+        resolve(Math.random());
+      } else {
+        reject(new Error("User is not logged in"));
       }
-    }, 2000);
-  }, 1000);
-}
+    }, 1000);
+  });
+};
 
-function sayHello(err, message) {
-  if (err) {
-    console.error("Errore:", err);
-  } else {
-    console.log(message);
-  }
-}
-
-printAsyncName(sayHello);
+const promise2 = (randomNumber) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (randomNumber > 0.5) {
+        resolve({ name: "John", age: 24 });
+      } else {
+        reject(new Error("Random number is not greater than 0.5"));
+      }
+    }, 1000);
+  });
+};
