@@ -1,3 +1,3 @@
 # JSON methods
 
-Create the `fromJson` method that takes in a json as parameter and returns an object of type `Person`.
+In this exercise we need to filter the properties of the object person in order to convert just the id and age values into JSON.

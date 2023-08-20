@@ -1,21 +1,10 @@
-class Person {
-  constructor(id, firstName, lastName, age) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
+const person = {
+  id: 1,
+  firstName: "Mario",
+  lastName: "Rossi",
+  age: 25,
+};
 
-  toJson() {
-    return JSON.stringify(this);
-  }
+const json = JSON.stringify(person);
 
-  static fromJson(json) {
-    const data = JSON.parse(json);
-    return new Person(data.id, data.firstName, data.lastName, data.age);
-  }
-}
-
-const json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
-const developer = Person.fromJson(json);
-console.log(developer);
+console.log(json); // Should return: { id: 1, age: 25 }
